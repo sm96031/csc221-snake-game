@@ -14,9 +14,9 @@ This is my final project for CSC221. It’s a Snake Game built in Python using P
 - Score tracking
 - Game over screen with replay option
 
-#  Files
+#  Files 
 
-- (https://github.com/sm96031/csc221-snake-game/blob/main/snake_game.py)` – main source code
+- (https://github.com/sm96031/csc221-snake-game/blob/main/snake_game.py) – main source code
 
 #  Requirements
 
