@@ -16,7 +16,7 @@ This is my final project for CSC221. It’s a Snake Game built in Python using P
 
 #  Files
 
-- `snake_game.py` – main source code
+- (https://github.com/sm96031/csc221-snake-game/blob/main/snake_game.py)` – main source code
 
 #  Requirements
 
