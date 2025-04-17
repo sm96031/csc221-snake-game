@@ -26,7 +26,7 @@ This is my final project for CSC221. It’s a Snake Game built in Python using P
 #  Screenshot
 
 (See below — upload your screenshot and paste its link here)
-(https://github.com/sm96031/csc221-snake-game/blob/main/Screenshot 2025-04-17 132237.png)
+(https://github.com/sm96031/csc221-snake-game/blob/main/Screenshot.png)
 ---
 
 **Project by [ Shakila Mukhlis] for CSC221**
