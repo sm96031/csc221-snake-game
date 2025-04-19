@@ -21,7 +21,7 @@ This is my final project for CSC221. It’s a Snake Game built in Python using P
 #  Requirements
 
 - Python 3.1
-- Pygame (Install it with`)
+- Pygame (Install it with)
 
 #  Screenshot
 
