@@ -23,13 +23,12 @@ pygame.display.set_caption('Snake Game')
 # Snake settings
 clock = pygame.time.Clock()
 snake_block = 10
-snake_speed = 20
-
+snake_speed = 10
 # Font settings
 font_style = pygame.font.SysFont(None, 25) # For Game Over and messages
 score_font = pygame.font.SysFont(None, 25) # For score display
 
-# The display score
+# This displays the score on the screen in the top-left corner. It updates every time based on how much food was eaten.
 def Your_score(score):
     value = score_font.render("Score: " + str(score), True, yellow)
     dis.blit(value, [0, 0])
@@ -45,7 +44,7 @@ def message(msg, color):
     mesg = font_style.render(msg, True, color)
     dis.blit(mesg, [dis_width / 3, dis_height / 3])
 
-# the Main game loop
+# This is the key part that makes the game work. It has a loop that keeps checking for events, moves the snake, looks for any crashes, and refreshes the screen.
 def game_loop():
     global Your_score
     game_over = False
@@ -55,18 +54,19 @@ def game_loop():
     x1 = dis_width / 2
     y1 = dis_height / 2
 
-    # the Movement
+    # This part checks for arrow key presses and moves the snake everywhere.
     x1_change = 0
     y1_change = 0
 
-    # Snake body
+    # The snake's position is saved as a set of points. Whenever it eats, this set gets bigger.
     snake_List = []
     Length_of_snake = 1
 
-    # Generate  food
+    # Here, we check if the snake’s head touches the food. If so, a new food is generated and the snake grows.
     foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
     foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
 
+    #When the snake dies, the screen shows a red ‘Game Over’ message and the final score.
     while not game_over:
 
         while game_close == True:
@@ -103,13 +103,12 @@ def game_loop():
                 elif event.key == pygame.K_DOWN:
                     y1_change = snake_block
                     x1_change = 0
-        # Check for wall
+
+        x1 += x1_change
+        y1 += y1_change
+
         if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
             game_close = True
-            # Update snake's position
-            x1 += x1_change
-            y1 += y1_change
-
 
         # Show the score on screen
         dis.fill(blue)
